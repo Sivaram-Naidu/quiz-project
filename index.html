@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-300">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitive Exam Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body
+    class="flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8 bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+    <div
+        class="bg-white dark:bg-gray-800 p-6 sm:p-8 lg:p-10 rounded-xl shadow-2xl w-full max-w-4xl transition-colors duration-300">
+        <header class="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-8">
+            <h1
+                class="text-3xl sm:text-4xl font-extrabold text-gray-800 dark:text-white text-center sm:text-left mb-4 sm:mb-0">
+                Competitive Exam Practice
+            </h1>
+            <div class="flex space-x-3">
+                <button id="darkModeToggle" aria-label="Toggle Dark Mode"
+                    class="p-3 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white shadow-md hover:bg-gray-300 dark:hover:bg-gray-600 transition duration-300 flex items-center justify-center">
+                    <svg id="moon-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                        </path>
+                    </svg>
+                    <svg id="sun-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 3v1m0 16v1m9-9h1M3 12H2m15.325-6.675l-.707-.707M6.675 17.325l-.707-.707M18.675 6.675l.707-.707M5.325 18.675l.707.707M12 7a5 5 0 100 10 5 5 0 000-10z">
+                        </path>
+                    </svg>
+                </button>
+                <button id="fullscreenToggle" aria-label="Toggle Fullscreen"
+                    class="p-3 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white shadow-md hover:bg-gray-300 dark:hover:bg-gray-600 transition duration-300 flex items-center justify-center">
+                    <svg id="expand-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m0 0l-5 5M4 16v4m0 0h4m0 0l5-5m11 1v4m0 0h-4m0 0l-5-5">
+                        </path>
+                    </svg>
+                    <svg id="compress-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 4H4m0 0v4m0-4l5 5m7-5h4m0 0v4m0-4l-5 5M8 20H4m0 0v-4m0 0l5-5m7 5h4m0 0v-4m0 0l-5-5">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <section id="subject-selection-section"
+                class="text-center p-6 sm:p-8 rounded-lg shadow-md bg-blue-50 dark:bg-blue-900 transition-colors duration-300">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-white mb-6">Choose Your Exam Settings
+                </h2>
+
+                <div class="mb-6">
+                    <label for="subject-select"
+                        class="block text-xl font-medium text-gray-700 dark:text-gray-200 mb-3">Select a
+                        Subject:</label>
+                    <select id="subject-select"
+                        class="block w-full max-w-sm mx-auto p-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg bg-white dark:bg-gray-700 dark:text-white">
+                        <option value="">-- Please choose a subject --</option>
+                        <option value="math_questions.json">Mathematics</option>
+                        <option value="science_questions.json">Science</option>
+                        <option value="history_questions.json">History</option>
+                    </select>
+                </div>
+
+                <div class="mb-8">
+                    <label for="timer-select"
+                        class="block text-xl font-medium text-gray-700 dark:text-gray-200 mb-3">Select Duration:</label>
+                    <select id="timer-select"
+                        class="block w-full max-w-sm mx-auto p-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg bg-white dark:bg-gray-700 dark:text-white">
+                        <option value="900">15 Minutes</option>
+                        <option value="1800">30 Minutes</option>
+                        <option value="2700">45 Minutes</option>
+                        <option value="3600" selected>60 Minutes</option>
+                    </select>
+                </div>
+
+                <button id="start-exam-button"
+                    class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:bg-blue-700 transition duration-300 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed">
+                    Start Exam
+                </button>
+            </section>
+
+            <section id="exam-section" class="hidden">
+                <div
+                    class="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-8 bg-blue-50 dark:bg-blue-900 p-4 rounded-lg shadow-inner transition-colors duration-300">
+                    <div class="text-lg sm:text-xl font-semibold text-gray-700 dark:text-gray-200 mb-2 sm:mb-0">
+                        Time Remaining: <span id="timer" class="text-blue-600 dark:text-blue-400 font-bold">60:00</span>
+                    </div>
+                    <div class="text-lg sm:text-xl font-semibold text-gray-700 dark:text-gray-200">
+                        Question <span id="current-question-number">1</span> of <span id="total-questions"></span>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 dark:bg-gray-700 p-5 rounded-lg shadow-md mb-6 transition-colors duration-300">
+                    <p id="question-text" class="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                    </p>
+                    <div id="options-container" class="space-y-4"></div>
+                </div>
+
+                <div class="mt-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg shadow-md">
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-3">Question Navigation</h3>
+                    <div id="question-nav-grid"
+                        class="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 gap-2 max-h-40 overflow-y-auto pr-2">
+                    </div>
+                </div>
+
+                <div class="flex justify-between mt-6">
+                    <button id="prev-button"
+                        class="bg-gray-300 dark:bg-gray-600 text-gray-800 dark:text-white px-6 py-3 rounded-lg font-semibold text-lg hover:bg-gray-400 dark:hover:bg-gray-500 transition duration-300 shadow-md disabled:opacity-50 disabled:cursor-not-allowed">Previous</button>
+                    <button id="next-button"
+                        class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 transition duration-300 shadow-lg">Next</button>
+                </div>
+            </section>
+
+            <section id="results-section" class="hidden text-center">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-green-700 dark:text-green-400 mb-6">Exam Results
+                </h2>
+                <p id="score-display" class="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-white mb-8"></p>
+                <div id="answers-breakdown" class="text-left space-y-4 mb-8"></div>
+                <button id="retake-exam-button"
+                    class="bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:bg-purple-700 transition duration-300 shadow-lg">
+                    Retake Exam
+                </button>
+            </section>
+        </main>
+    </div>
+
+
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

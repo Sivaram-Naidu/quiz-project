@@ -1,0 +1,52 @@
+[
+    {
+        "question": "Who was the first Prime Minister of India?",
+        "options": [
+            "Mahatma Gandhi",
+            "Jawaharlal Nehru",
+            "Sardar Patel",
+            "Indira Gandhi"
+        ],
+        "correctAnswer": "Jawaharlal Nehru"
+    },
+    {
+        "question": "In which year did World War II begin?",
+        "options": [
+            "1914",
+            "1939",
+            "1945",
+            "1929"
+        ],
+        "correctAnswer": "1939"
+    },
+    {
+        "question": "The ancient city of Rome was built on how many hills?",
+        "options": [
+            "Five",
+            "Seven",
+            "Three",
+            "Ten"
+        ],
+        "correctAnswer": "Seven"
+    },
+    {
+        "question": "Who is credited with discovering America in 1492?",
+        "options": [
+            "Vasco da Gama",
+            "Ferdinand Magellan",
+            "Christopher Columbus",
+            "Marco Polo"
+        ],
+        "correctAnswer": "Christopher Columbus"
+    },
+    {
+        "question": "The Indus Valley Civilization was primarily located in what is now modern-day...",
+        "options": [
+            "Iran",
+            "Egypt",
+            "Pakistan",
+            "Turkey"
+        ],
+        "correctAnswer": "Pakistan"
+    }
+]

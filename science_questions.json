@@ -1,0 +1,52 @@
+[
+    {
+        "question": "What is the powerhouse of the cell?",
+        "options": [
+            "Nucleus",
+            "Ribosome",
+            "Mitochondrion",
+            "Cell Wall"
+        ],
+        "correctAnswer": "Mitochondrion"
+    },
+    {
+        "question": "What force keeps the planets in orbit around the Sun?",
+        "options": [
+            "Magnetism",
+            "Gravity",
+            "Friction",
+            "Tension"
+        ],
+        "correctAnswer": "Gravity"
+    },
+    {
+        "question": "What is the chemical symbol for gold?",
+        "options": [
+            "Ag",
+            "Au",
+            "Go",
+            "Gd"
+        ],
+        "correctAnswer": "Au"
+    },
+    {
+        "question": "Which gas do plants absorb from the atmosphere during photosynthesis?",
+        "options": [
+            "Oxygen",
+            "Nitrogen",
+            "Carbon Dioxide",
+            "Hydrogen"
+        ],
+        "correctAnswer": "Carbon Dioxide"
+    },
+    {
+        "question": "Which is the largest planet in our solar system?",
+        "options": [
+            "Earth",
+            "Mars",
+            "Jupiter",
+            "Saturn"
+        ],
+        "correctAnswer": "Jupiter"
+    }
+]
